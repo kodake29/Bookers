@@ -1,0 +1,26 @@
+<h1>Books</h1>
+<%= @books.each do |book| %>
+	<div class="bookers-box claerfix">
+		<section class="bookers-item">
+			<p class="bookers-item-title"><%= book.title %></p>
+			<p class="bookers-item-body"><%= book.body %></p>
+			<p><%=link_to "show",book_path(book) %></p>
+			<p><%= link_to "edit", edit_book_path(book) %></p>
+            <p><%= link_to "delete", book_path(book),method: :delete %></p>
+		</section>
+	</div>
+<% end %>
+
+<h1>New book</h1>
+<!-- form_for部分 -->
+<%= form_for(@book) do |f| %>
+ 
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+ 
+  <h4>Body</h4>
+  <%= f.text_area :body %>
+ 
+  <%= f.submit 'Create Book' %>
+ 
+<% end %>
