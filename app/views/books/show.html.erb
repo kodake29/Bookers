@@ -5,5 +5,9 @@
 <% end %>
 <p>Title:<span><%= @book.title %></span></p>
 <p>Body:<span><%= @book.body %></span></p>
+<div class="edit">
 <%= link_to "Edit", edit_book_path(@book) %>
-<%= link_to "Back", books_path %>
+  </div>
+  <div class="back">
+  <%= link_to "Back", books_path %>
+  </div>

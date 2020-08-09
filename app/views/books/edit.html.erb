@@ -11,11 +11,26 @@
       </ul>
     </div>
   <% end %>
-  <h4>Title</h4>
+
+  <div class="field">
+  <label for>Title</label>
+  <div class="text-field">
   <%= f.text_field :title %>
-  <h4>Body</h4>
+</div>
+ </div>
+ <div class="field">
+  <label for>Body</label>
+  <div class="text-area">
   <%= f.text_area :body %>
+  </div>
+ </div>
+ <div class="action">
   <%= f.submit 'Update Book' %>
+ </div>
+ <div class="show">
   <%= link_to "Show", book_path(@book) %>
+</div>
+  <div class="back">
   <%= link_to "Back", books_path %>
+  </div>
 <% end %>
